@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumbangan Surau Al-Hijrah SBCR Fasa 3C - Projek Tangki Air & Dapur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f9ff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #0d5b3e;
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 2.2rem;
+        }
+        
+        .logo-text {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .hero {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            color: #0d5b3e;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #444;
+        }
+        
+        .goal-box {
+            background-color: #e9f7ef;
+            border-left: 5px solid #0d5b3e;
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+        
+        .goal-amount {
+            font-size: 2.8rem;
+            color: #0d5b3e;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .goal-text {
+            font-size: 1.3rem;
+            color: #333;
+        }
+        
+        .content-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 60px 0;
+        }
+        
+        .info-box, .qr-box {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+        
+        .section-title {
+            color: #0d5b3e;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9f7ef;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+        }
+        
+        .bank-details {
+            background-color: #f8fdfa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        
+        .bank-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .bank-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .bank-label {
+            font-weight: 600;
+            color: #0d5b3e;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .bank-value {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        
+        .contact-person {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        
+        .contact-card {
+            flex: 1;
+            min-width: 250px;
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .contact-name {
+            font-weight: 700;
+            color: #0d5b3e;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        
+        .contact-role {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .contact-phone {
+            font-size: 1.1rem;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .contact-phone i {
+            color: #0d5b3e;
+            margin-right: 8px;
+        }
+        
+        .qr-container {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .qr-placeholder {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto 25px;
+            background-color: #f5f5f5;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #ccc;
+            color: #888;
+        }
+        
+        .qr-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #0d5b3e;
+        }
+        
+        .qr-caption {
+            font-size: 1.1rem;
+            color: #333;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        
+        .project-details {
+            background-color: #f8fdfa;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+        
+        .project-details h3 {
+            color: #0d5b3e;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .project-details p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            background-color: #0a4930;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+        
+        .footer-text {
+            opacity: 0.9;
+            font-size: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .duitnow-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: #f0f8ff;
+            color: #0d5b3e;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .goal-amount {
+                font-size: 2.2rem;
+            }
+            
+            .content-section {
+                flex-direction: column;
+            }
+            
+            .info-box, .qr-box {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-mosque"></i>
+                <span class="logo-text">SURAU AL-HIJRAH SBCR FASA 3C</span>
+            </div>
+            <div class="subtitle">Membina Kecemerlangan Ummah Melalui Infrastruktur Surau</div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Sumbangan Projek Tangki Air & Dapur Surau</h1>
+            <p>Bantu kami melengkapkan projek pembangunan tangki air dan dapur untuk kemudahan jemaah surau. Setiap sumbangan tuan/puan sangat dihargai.</p>
+            
+            <div class="goal-box">
+                <div class="goal-text">Jumlah Sumbangan Diperlukan:</div>
+                <div class="goal-amount">RM 15,000</div>
+                <div class="goal-text">Bagi melengkapkan projek tangki air dan dapur surau</div>
+            </div>
+            
+            <div class="duitnow-badge">
+                <i class="fas fa-qrcode" style="margin-right: 10px;"></i>
+                DuitNow QR
+            </div>
+        </div>
+    </section>
+    
+    <div class="container">
+        <section class="content-section">
+            <div class="info-box">
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> Maklumat Sumbangan</h2>
+                
+                <div class="bank-details">
+                    <div class="bank-item">
+                        <span class="bank-label">Nama Akaun</span>
+                        <div class="bank-value">Surau Al Hijrah SBCR Fasa 3C</div>
+                    </div>
+                    
+                    <div class="bank-item">
+                        <span class="bank-label">Nama Bank</span>
+                        <div class="bank-value">Bank Islam Malaysia Berhad</div>
+                    </div>
+                    
+                    <div class="bank-item">
+                        <span class="bank-label">Nombor Akaun</span>
+                        <div class="bank-value">12-168-01-003092-7</div>
+                    </div>
+                    
+                    <div class="bank-item">
+                        <span class="bank-label">Rujukan Bayaran</span>
+                        <div class="bank-value">Pembangunan</div>
+                    </div>
+                </div>
+                
+                <h3 class="section-title" style="font-size: 1.5rem; margin-top: 30px;"><i class="fas fa-receipt"></i> Penghantaran Resit Sumbangan</h3>
+                <p style="margin-bottom: 20px;">Jika Tuan/Puan menggunakan QR code, resit sumbangan/infak boleh dihantar kepada:</p>
+                
+                <div class="contact-person">
+                    <div class="contact-card">
+                        <div class="contact-name">En. Syam</div>
+                        <div class="contact-role">Pengerusi Surau</div>
+                        <div class="contact-phone"><i class="fas fa-phone"></i> 019-6636261</div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-name">En. Amin</div>
+                        <div class="contact-role">Bendahari Surau</div>
+                        <div class="contact-phone"><i class="fas fa-phone"></i> 010-7893369</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="qr-box">
+                <h2 class="section-title"><i class="fas fa-qrcode"></i> Sumbangan Melalui QR Code</h2>
+                
+                <div class="qr-container">
+                    <div class="qr-placeholder">
+                        <i class="fas fa-qrcode"></i>
+                        <div>QR Code Sumbangan</div>
+                        <div style="font-size: 0.9rem; margin-top: 10px;">(Letakkan QR code anda di sini)</div>
+                    </div>
+                    
+                    <p class="qr-caption">Sumbangan Tuan/Puan boleh terus disalurkan ke akaun surau seperti di bawah.</p>
+                    
+                    <div style="margin-top: 30px; background-color: #f0f8ff; padding: 20px; border-radius: 10px;">
+                        <h3 style="color: #0d5b3e; margin-bottom: 15px;"><i class="fas fa-lightbulb"></i> Cara Gunakan QR Code</h3>
+                        <ol style="text-align: left; padding-left: 20px;">
+                            <li>Buka aplikasi mobile banking anda</li>
+                            <li>Pilih fungsi "Scan QR" atau "DuitNow QR"</li>
+                            <li>Imbas QR code di atas</li>
+                            <li>Masukkan jumlah sumbangan</li>
+                            <li>Sahkan pembayaran</li>
+                            <li>Hantar resit kepada pihak surau</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="project-details">
+            <h3><i class="fas fa-project-diagram"></i> Maklumat Lanjut Projek</h3>
+            <p>Projek pembangunan surau ini melibatkan pembinaan tangki air dan dapur untuk kemudahan jemaah. Tangki air diperlukan untuk memastikan bekalan air yang mencukupi untuk keperluan wuduk dan kebersihan surau, manakala dapur akan memudahkan aktiviti memasak untuk majlis-majlis agama dan komuniti.</p>
+            <p>Dengan sumbangan tuan/puan, projek ini dapat disiapkan dengan lebih cepat dan memberi manfaat kepada seluruh komuniti SBCR Fasa 3C.</p>
+            <p style="margin-top: 20px; font-weight: 600; color: #0d5b3e;">Setiap sumbangan, walau kecil sekalipun, sangat dihargai dan diberkati.</p>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-text">
+                <p>© 2023 Surau Al-Hijrah SBCR Fasa 3C (SAHSBCR3C). Semua hak cipta terpelihara.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">Landing page sumbangan untuk projek pembangunan tangki air dan dapur surau.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script untuk menambah interaktiviti
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animasi untuk kotak sasaran sumbangan
+            const goalBox = document.querySelector('.goal-box');
+            goalBox.addEventListener('mouseover', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            goalBox.addEventListener('mouseout', function() {
+                this.style.transform = 'translateY(0)';
+            });
+            
+            // Highlight untuk nombor telefon
+            const phoneNumbers = document.querySelectorAll('.contact-phone');
+            phoneNumbers.forEach(phone => {
+                phone.addEventListener('click', function() {
+                    const phoneNum = this.textContent.trim();
+                    alert('Nombor telefon: ' + phoneNum + '\n\nAnda boleh hubungi nombor ini untuk menghantar resit sumbangan.');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
